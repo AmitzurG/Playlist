@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playlistsFragment">
+
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.example.playlists.view.PlaylistsFragment"
+        android:label="@string/playlistsFragmentLabel"
+        tools:layout="@layout/fragment_playlists">
+
+        <action
+            android:id="@+id/action_playlistFragment_to_playlistItemsFragment"
+            app:destination="@id/playlistItemsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playlistItemsFragment"
+        android:name="com.example.playlists.view.PlaylistItemsFragment"
+        android:label="@string/playlistItemsFragmentLabel"
+        tools:layout="@layout/fragment_playlist_items">
+        <argument
+            android:name="playlistIndex"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_playlistItemsFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.example.playlists.view.VideoPlayerFragment"
+        android:label="@string/videoPlayerFragmentLabel"
+        tools:layout="@layout/fragment_video_player" >
+        <argument
+            android:name="videoId"
+            app:argType="string" />
+        <argument
+            android:name="videoName"
+            app:argType="string" />
+    </fragment>
+</navigation>

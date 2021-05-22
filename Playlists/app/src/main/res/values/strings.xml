@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Playlists</string>
+    <string name="playlistsFragmentLabel">Youtube Playlists</string>
+    <string name="playlistItemsFragmentLabel">%1$s Items</string>
+    <string name="videoPlayerFragmentLabel">%1$s Video</string>
+    <string name="thumbnail">Thumbnail</string>
+</resources>

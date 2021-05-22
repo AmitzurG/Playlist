@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="playlistItemHeight">100dp</dimen>
+    <dimen name="itemHeight">150dp</dimen>
+    <dimen name="thumbnailSize">110dp</dimen>
+</resources>
